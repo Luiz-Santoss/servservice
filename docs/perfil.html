@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - ConectaServ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="barra-acessibilidade"
+      role="toolbar"
+      aria-label="Acessibilidade"
+    >
+      <button type="button" data-a11y="fonte" aria-pressed="false">
+        <i class="fa-solid fa-text-height"></i> Aumentar fonte
+      </button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste
+      </button>
+      <button type="button" data-a11y="voz">
+        <i class="fa-solid fa-volume-high"></i> Ler em voz alta
+      </button>
+    </div>
+
+    <header>
+      <a href="catalogo.html" class="btn-voltar"
+        ><i class="fa-solid fa-arrow-left"></i> Voltar ao catálogo</a
+      >
+      <h1>Perfil da Profissional</h1>
+      <h2>Conheça o trabalho e entre em contato direto.</h2>
+    </header>
+
+    <main class="perfil">
+      <div id="perfil"><p class="vazio">Carregando...</p></div>
+    </main>
+
+    <footer>
+      <p>ConectaServ &copy; 2026 - Mulheres de Sergipe</p>
+      <span class="selo-snct"
+        >Ciência Delas · SNCT 2026 · ODS 5 (Igualdade de gênero) e ODS 8
+        (Trabalho decente)</span
+      >
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/perfil.js"></script>
+  </body>
+</html>

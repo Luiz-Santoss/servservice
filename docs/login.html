@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar - ConectaServ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="barra-acessibilidade"
+      role="toolbar"
+      aria-label="Acessibilidade"
+    >
+      <button type="button" data-a11y="fonte" aria-pressed="false">
+        <i class="fa-solid fa-text-height"></i> Aumentar fonte
+      </button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste
+      </button>
+      <button type="button" data-a11y="voz">
+        <i class="fa-solid fa-volume-high"></i> Ler em voz alta
+      </button>
+    </div>
+
+    <header>
+      <a href="index.html" class="btn-voltar"
+        ><i class="fa-solid fa-arrow-left"></i> Voltar ao início</a
+      >
+      <h1>Entrar</h1>
+      <h2>Acesse sua conta para salvar favoritas ou editar seu perfil.</h2>
+    </header>
+
+    <main class="form">
+      <div class="card">
+        <form id="form-login">
+          <div class="grupo-campo">
+            <label for="email"
+              ><i class="fa-solid fa-envelope"></i> E-mail</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="grupo-campo">
+            <label for="senha"><i class="fa-solid fa-lock"></i> Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <p class="erro-campo" id="erro-login" role="alert"></p>
+          <button type="submit" class="btn-submit btn-vinho">
+            <i class="fa-solid fa-right-to-bracket"></i> Entrar
+          </button>
+        </form>
+        <p class="links-conta">
+          Ainda não tem conta?
+          <a href="cadastro-trabalhadora.html">Divulgar meu trabalho</a> ·
+          <a href="cadastro-cliente.html">Contratar serviços</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>ConectaServ &copy; 2026 - Mulheres de Sergipe</p>
+      <span class="selo-snct"
+        >Ciência Delas · SNCT 2026 · ODS 5 (Igualdade de gênero) e ODS 8
+        (Trabalho decente)</span
+      >
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha conta - ConectaServ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="barra-acessibilidade"
+      role="toolbar"
+      aria-label="Acessibilidade"
+    >
+      <button type="button" data-a11y="fonte" aria-pressed="false">
+        <i class="fa-solid fa-text-height"></i> Aumentar fonte
+      </button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste
+      </button>
+      <button type="button" data-a11y="voz">
+        <i class="fa-solid fa-volume-high"></i> Ler em voz alta
+      </button>
+    </div>
+
+    <header>
+      <a href="catalogo.html" class="btn-voltar"
+        ><i class="fa-solid fa-arrow-left"></i> Voltar ao catálogo</a
+      >
+      <h1>Minha conta</h1>
+      <h2>Mantenha seus dados e seu perfil sempre atualizados.</h2>
+    </header>
+
+    <main class="form">
+      <div class="card">
+        <p id="carregando" class="vazio">Carregando...</p>
+        <form id="form-conta" hidden>
+          <div id="bloco-foto" hidden>
+            <h3 class="secao-titulo-form">Foto de perfil</h3>
+            <div class="foto-conta">
+              <div class="avatar avatar-grande" id="avatar-conta">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <label class="btn-contato btn-foto" for="arquivo-foto">
+                  <i class="fa-solid fa-camera"></i> Escolher foto
+                </label>
+                <input
+                  type="file"
+                  id="arquivo-foto"
+                  accept="image/jpeg,image/png,image/webp"
+                  hidden
+                />
+                <p class="dica-foto">
+                  JPG, PNG ou WEBP, até 3 MB. A foto é enviada assim que você
+                  escolhe.
+                </p>
+                <p class="erro-campo" id="erro-foto" role="alert"></p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="secao-titulo-form">Seus dados</h3>
+          <div class="grupo-campo">
+            <label for="nome"
+              ><i class="fa-solid fa-user"></i> Nome completo</label
+            >
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="linha-dupla">
+            <div class="grupo-campo">
+              <label for="whatsapp"
+                ><i class="fa-brands fa-whatsapp"></i> WhatsApp</label
+              >
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                placeholder="(79) 99999-9999"
+                required
+              />
+            </div>
+            <div class="grupo-campo">
+              <label for="cidade"
+                ><i class="fa-solid fa-location-dot"></i> Cidade (SE)</label
+              >
+              <select id="cidade" name="cidade" required>
+                <option>Aracaju</option>
+                <option>Nossa Senhora do Socorro</option>
+                <option>Lagarto</option>
+                <option>Itabaiana</option>
+                <option>Estância</option>
+                <option>São Cristóvão</option>
+                <option>Outra</option>
+              </select>
+            </div>
+          </div>
+          <div class="grupo-campo">
+            <label for="bairro"
+              ><i class="fa-solid fa-map-pin"></i> Bairro</label
+            >
+            <input type="text" id="bairro" name="bairro" />
+          </div>
+
+          <div id="bloco-trab" hidden>
+            <h3 class="secao-titulo-form">Seu trabalho</h3>
+            <div class="grupo-campo">
+              <label for="categoria"
+                ><i class="fa-solid fa-tags"></i> Categoria</label
+              >
+              <select id="categoria" name="categoria">
+                <option value="artesanato">Artesanato</option>
+                <option value="gastronomia">Gastronomia e Festas</option>
+                <option value="estetica">Beleza, Estética e Bem-estar</option>
+                <option value="gerais">Serviços Gerais e Organização</option>
+                <option value="aulas">Aulas e Reforço</option>
+                <option value="cuidados">Cuidado com Pessoas e Pets</option>
+              </select>
+            </div>
+            <div class="grupo-campo">
+              <label for="descricao"
+                ><i class="fa-solid fa-align-left"></i> Descrição do
+                trabalho</label
+              >
+              <textarea id="descricao" name="descricao"></textarea>
+            </div>
+            <div class="grupo-campo">
+              <label for="instagram"
+                ><i class="fa-brands fa-instagram"></i> Instagram ou
+                portfólio</label
+              >
+              <input
+                type="text"
+                id="instagram"
+                name="instagram"
+                placeholder="@seuperfil ou link"
+              />
+            </div>
+          </div>
+
+          <p class="erro-campo" id="erro-conta" role="alert"></p>
+          <button type="submit" class="btn-submit btn-dourado">
+            <i class="fa-solid fa-floppy-disk"></i> Salvar alterações
+          </button>
+          <div class="aviso-sucesso" id="ok-conta" role="status">
+            Dados salvos com sucesso!
+          </div>
+          <p class="links-conta">
+            <a id="ver-perfil" href="#" hidden>Ver meu perfil público</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>ConectaServ &copy; 2026 - Mulheres de Sergipe</p>
+      <span class="selo-snct"
+        >Ciência Delas · SNCT 2026 · ODS 5 (Igualdade de gênero) e ODS 8
+        (Trabalho decente)</span
+      >
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/minha-conta.js"></script>
+  </body>
+</html>

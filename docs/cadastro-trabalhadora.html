@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro da Profissional - ConectaServ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="barra-acessibilidade"
+      role="toolbar"
+      aria-label="Acessibilidade"
+    >
+      <button type="button" data-a11y="fonte" aria-pressed="false">
+        <i class="fa-solid fa-text-height"></i> Aumentar fonte
+      </button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste
+      </button>
+      <button type="button" data-a11y="voz">
+        <i class="fa-solid fa-volume-high"></i> Ler em voz alta
+      </button>
+    </div>
+
+    <header>
+      <a href="index.html" class="btn-voltar"
+        ><i class="fa-solid fa-arrow-left"></i> Voltar ao início</a
+      >
+      <h1>Cadastro da Profissional</h1>
+      <h2>
+        Divulgue seu trabalho de graça e seja encontrada por novos clientes em
+        Sergipe.
+      </h2>
+    </header>
+
+    <main class="form">
+      <div class="card">
+        <form data-cadastro>
+          <h3 class="secao-titulo-form">Dados pessoais</h3>
+          <div class="grupo-campo">
+            <label for="nome"
+              ><i class="fa-solid fa-user"></i> Nome completo</label
+            ><input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Ex.: Maria Santos"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="linha-dupla">
+            <div class="grupo-campo">
+              <label for="email"
+                ><i class="fa-solid fa-envelope"></i> E-mail</label
+              ><input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="voce@email.com"
+                required
+              />
+            </div>
+            <div class="grupo-campo">
+              <label for="whatsapp"
+                ><i class="fa-brands fa-whatsapp"></i> WhatsApp para
+                contato</label
+              ><input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                placeholder="(79) 99999-9999"
+                required
+              />
+            </div>
+          </div>
+          <div class="linha-dupla">
+            <div class="grupo-campo">
+              <label for="cidade"
+                ><i class="fa-solid fa-location-dot"></i> Cidade de atuação
+                (SE)</label
+              >
+              <select id="cidade" name="cidade" required>
+                <option value="" disabled selected>Selecione sua cidade</option>
+                <option>Aracaju</option>
+                <option>Nossa Senhora do Socorro</option>
+                <option>Lagarto</option>
+                <option>Itabaiana</option>
+                <option>Estância</option>
+                <option>São Cristóvão</option>
+                <option>Outra</option>
+              </select>
+            </div>
+            <div class="grupo-campo">
+              <label for="bairro"
+                ><i class="fa-solid fa-map-pin"></i> Bairro principal</label
+              ><input
+                type="text"
+                id="bairro"
+                name="bairro"
+                placeholder="Ex.: Atalaia"
+              />
+            </div>
+          </div>
+
+          <h3 class="secao-titulo-form">Informações do serviço</h3>
+          <div class="grupo-campo">
+            <label for="categoria"
+              ><i class="fa-solid fa-list-check"></i> Categoria de
+              serviço</label
+            >
+            <select id="categoria" name="categoria" required>
+              <option value="" disabled selected>
+                Selecione sua área principal
+              </option>
+              <option value="artesanato">Artesanato</option>
+              <option value="gastronomia">Gastronomia e Festas</option>
+              <option value="estetica">Beleza, Estética e Bem-estar</option>
+              <option value="gerais">Serviços Gerais e Organização</option>
+              <option value="aulas">Aulas e Reforço</option>
+              <option value="cuidados">Cuidado com Pessoas e Pets</option>
+            </select>
+          </div>
+          <div class="grupo-campo">
+            <label for="descricao"
+              ><i class="fa-solid fa-pen-to-square"></i> Descrição dos seus
+              serviços</label
+            ><textarea
+              id="descricao"
+              name="descricao"
+              placeholder="Conte sua experiência, especialidades e diferenciais..."
+              required
+            ></textarea>
+          </div>
+          <div class="grupo-campo">
+            <label for="instagram"
+              ><i class="fa-brands fa-instagram"></i> Instagram ou portfólio
+              (opcional)</label
+            ><input
+              type="text"
+              id="instagram"
+              name="instagram"
+              placeholder="@seuperfil ou link"
+            />
+          </div>
+
+          <h3 class="secao-titulo-form">Acesso à conta</h3>
+          <div class="linha-dupla">
+            <div class="grupo-campo">
+              <label for="senha"><i class="fa-solid fa-lock"></i> Senha</label
+              ><input
+                type="password"
+                id="senha"
+                name="senha"
+                minlength="6"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+            <div class="grupo-campo">
+              <label for="confirmar-senha"
+                ><i class="fa-solid fa-shield-halved"></i> Confirmar
+                senha</label
+              ><input
+                type="password"
+                id="confirmar-senha"
+                name="confirmar-senha"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+          </div>
+          <p class="erro-campo" id="erro-senha" role="alert"></p>
+          <button type="submit" class="btn-submit btn-dourado">
+            <i class="fa-solid fa-paper-plane"></i> Cadastrar meu trabalho
+          </button>
+          <div class="aviso-sucesso" role="status">
+            Cadastro enviado com sucesso!
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>ConectaServ &copy; 2026 - Mulheres de Sergipe</p>
+      <span class="selo-snct"
+        >Ciência Delas · SNCT 2026 · ODS 5 (Igualdade de gênero) e ODS 8
+        (Trabalho decente)</span
+      >
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
