@@ -88,7 +88,7 @@ const norm = (t) =>
     .toLowerCase();
 const msgWhats = (p) =>
   encodeURIComponent(
-    `Olá, ${p.nome.split(" ")[0]}! Vi seu perfil na plataforma ConectaServ e gostaria de orçar um serviço.`,
+    `Olá, ${p.nome.split(" ")[0]}! Vi seu perfil na plataforma ServService e gostaria de orçar um serviço.`,
   );
 const avatar = (p) =>
   p.foto
@@ -160,11 +160,11 @@ $("#grid").addEventListener("click", async (e) => {
   const s = e.target.closest("[data-share]");
   if (s) {
     const p = PROFISSIONAIS.find((x) => x.id === +s.dataset.share);
-    const texto = `Conheça ${p.nome} (${CATEGORIAS[p.cat]}) no ConectaServ: ${p.desc}`;
+    const texto = `Conheça ${p.nome} (${CATEGORIAS[p.cat]}) no ServService: ${p.desc}`;
     const link = location.origin + "/perfil.html?id=" + p.id;
     if (navigator.share) {
       try {
-        await navigator.share({ title: "ConectaServ", text: texto, url: link });
+        await navigator.share({ title: "ServService", text: texto, url: link });
       } catch (err) {}
     } else
       window.open(

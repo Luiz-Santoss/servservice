@@ -58,14 +58,14 @@ async function carregar() {
 }
 
 function desenhar(p, ehDona) {
-  document.title = p.nome + " - ConectaServ";
+  document.title = p.nome + " - ServService";
   const ig = (p.instagram || "").trim(),
     link = linkInstagram(ig);
   const instagram = ig
     ? `<h4>Instagram / portfólio</h4><p>${link ? `<a href="${esc(link)}" target="_blank" rel="noopener noreferrer">${esc(ig)}</a>` : esc(ig)}</p>`
     : "";
   const msg = encodeURIComponent(
-    `Olá, ${p.nome.split(" ")[0]}! Vi seu perfil na plataforma ConectaServ e gostaria de orçar um serviço.`,
+    `Olá, ${p.nome.split(" ")[0]}! Vi seu perfil na plataforma ServService e gostaria de orçar um serviço.`,
   );
   const avatar = p.foto
     ? `<div class="avatar avatar-grande"><img src="${esc(p.foto)}" alt="Foto de ${esc(p.nome)}"></div>`
@@ -109,11 +109,11 @@ function desenhar(p, ehDona) {
   });
 
   $("#compartilhar").onclick = async () => {
-    const texto = `Conheça ${p.nome} (${CATEGORIAS[p.cat] || ""}) no ConectaServ: ${p.desc}`;
+    const texto = `Conheça ${p.nome} (${CATEGORIAS[p.cat] || ""}) no ServService: ${p.desc}`;
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "ConectaServ",
+          title: "ServService",
           text: texto,
           url: location.href,
         });
