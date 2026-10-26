@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Profissionais - ConectaServ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="barra-acessibilidade"
+      role="toolbar"
+      aria-label="Acessibilidade"
+    >
+      <button type="button" data-a11y="fonte" aria-pressed="false">
+        <i class="fa-solid fa-text-height"></i> Aumentar fonte
+      </button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste
+      </button>
+      <button type="button" data-a11y="voz">
+        <i class="fa-solid fa-volume-high"></i> Ler em voz alta
+      </button>
+    </div>
+
+    <header>
+      <a href="index.html" class="btn-voltar"
+        ><i class="fa-solid fa-arrow-left"></i> Voltar ao início</a
+      >
+      <h1>Catálogo de Profissionais</h1>
+      <h2>Conecte-se com as melhores trabalhadoras autônomas de Sergipe.</h2>
+    </header>
+
+    <div class="container-busca">
+      <div class="card-busca">
+        <div class="campo-filtro">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input
+            id="busca"
+            type="search"
+            placeholder="Buscar por serviço ou profissional..."
+            aria-label="Buscar"
+          />
+        </div>
+        <div class="campo-filtro">
+          <i class="fa-solid fa-location-dot"></i>
+          <select id="filtro-cidade" aria-label="Cidade">
+            <option value="">Todas as cidades (SE)</option>
+            <option>Aracaju</option>
+            <option>Nossa Senhora do Socorro</option>
+            <option>Lagarto</option>
+            <option>Itabaiana</option>
+            <option>Estância</option>
+            <option>São Cristóvão</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips" role="group" aria-label="Categorias">
+      <button class="chip" data-cat="" aria-pressed="true">Todas</button>
+      <button class="chip" data-cat="artesanato" aria-pressed="false">
+        <i class="fa-solid fa-scroll"></i> Artesanato
+      </button>
+      <button class="chip" data-cat="gastronomia" aria-pressed="false">
+        <i class="fa-solid fa-cake-candles"></i> Gastronomia
+      </button>
+      <button class="chip" data-cat="estetica" aria-pressed="false">
+        <i class="fa-solid fa-scissors"></i> Estética
+      </button>
+      <button class="chip" data-cat="gerais" aria-pressed="false">
+        <i class="fa-solid fa-broom"></i> Serviços Gerais
+      </button>
+      <button class="chip" data-cat="aulas" aria-pressed="false">
+        <i class="fa-solid fa-book-open"></i> Aulas/Reforço
+      </button>
+      <button class="chip" data-cat="cuidados" aria-pressed="false">
+        <i class="fa-solid fa-paw"></i> Cuidados e Pets
+      </button>
+      <button class="chip" id="chip-fav" aria-pressed="false">
+        <i class="fa-solid fa-heart"></i> Minhas favoritas
+      </button>
+    </div>
+
+    <main class="catalogo">
+      <p class="contagem" id="contagem" aria-live="polite"></p>
+      <div class="grid-catalogo" id="grid"></div>
+    </main>
+
+    <footer>
+      <p>ConectaServ &copy; 2026 - Mulheres de Sergipe</p>
+      <span class="selo-snct"
+        >Ciência Delas · SNCT 2026 · ODS 5 (Igualdade de gênero) e ODS 8
+        (Trabalho decente)</span
+      >
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/catalogo.js"></script>
+  </body>
+</html>

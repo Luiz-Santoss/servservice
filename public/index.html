@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConectaServ - Mulheres de Sergipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="barra-acessibilidade"
+      role="toolbar"
+      aria-label="Acessibilidade"
+    >
+      <button type="button" data-a11y="fonte" aria-pressed="false">
+        <i class="fa-solid fa-text-height"></i> Aumentar fonte
+      </button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke"></i> Alto contraste
+      </button>
+      <button type="button" data-a11y="voz">
+        <i class="fa-solid fa-volume-high"></i> Ler em voz alta
+      </button>
+    </div>
+
+    <header class="hero">
+      <h1>ConectaServ</h1>
+      <h2>
+        Um catálogo gratuito para dar visibilidade às trabalhadoras autônomas de
+        Sergipe e aproximá-las de quem precisa de seus serviços.
+      </h2>
+      <div class="header-acoes">
+        <a href="catalogo.html" class="btn-cta btn-catalogo"
+          ><i class="fa-solid fa-address-book"></i> Ver catálogo de serviços</a
+        >
+        <a href="cadastro-trabalhadora.html" class="btn-cta btn-trabalhadora"
+          ><i class="fa-solid fa-briefcase"></i> Quero divulgar meu trabalho</a
+        >
+        <a href="cadastro-cliente.html" class="btn-cta btn-cliente"
+          ><i class="fa-solid fa-user-plus"></i> Quero contratar serviços</a
+        >
+      </div>
+    </header>
+
+    <div class="impacto" aria-label="Impacto da plataforma">
+      <div>
+        <strong id="stat-mulheres">0</strong
+        ><span id="rot-mulheres">mulheres cadastradas</span>
+      </div>
+      <div>
+        <strong id="stat-cidades">0</strong
+        ><span id="rot-cidades">cidades atendidas</span>
+      </div>
+      <div><strong>100%</strong><span>gratuito e sem taxas</span></div>
+    </div>
+
+    <main>
+      <section>
+        <div class="titulo-secao">
+          <h3>Sobre o ConectaServ</h3>
+          <div class="divisor"></div>
+        </div>
+        <div class="card">
+          <p>
+            Mulheres enfrentam preconceito no mercado de trabalho e têm taxas de
+            ocupação menores. O ConectaServ nasceu para valorizar as
+            trabalhadoras autônomas de Sergipe: elas mostram seu trabalho, e os
+            clientes encontram serviço de qualidade com facilidade e confiança.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="titulo-secao">
+          <h3>O que você vai encontrar</h3>
+          <div class="divisor"></div>
+        </div>
+        <div class="card">
+          <div class="item">
+            <div class="icone"><i class="fa-solid fa-user-gear"></i></div>
+            <div>
+              <h4>Profissionais autônomas</h4>
+              <p>
+                Mulheres de diferentes áreas divulgam suas habilidades e os
+                serviços que oferecem.
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icone">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+              <h4>Busca por serviço e categoria</h4>
+              <p>
+                Filtre por artesanato, gastronomia, estética, serviços gerais ou
+                aulas.
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icone"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>Busca por cidade</h4>
+              <p>Encontre profissionais que atendem na sua cidade ou região.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icone"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <h4>Contato direto pelo WhatsApp</h4>
+              <p>
+                Um clique abre a conversa com uma mensagem de orçamento já
+                pronta.
+              </p>
+            </div>
+          </div>
+          <div class="sustentavel">
+            <i class="fa-solid fa-leaf"></i> Contratar serviços locais reduz o
+            transporte, diminui a pegada de carbono e fortalece a economia da
+            comunidade sergipana.
+          </div>
+        </div>
+      </section>
+      <section id="destaques" hidden>
+        <div class="titulo-secao">
+          <h3>Profissionais em destaque</h3>
+          <div class="divisor"></div>
+        </div>
+        <div class="destaques-grid" id="destaques-grid"></div>
+        <p class="destaques-ver-todas">
+          <a href="catalogo.html" class="btn-cta btn-catalogo"
+            ><i class="fa-solid fa-address-book"></i> Ver todas as
+            profissionais</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>ConectaServ &copy; 2026 - Mulheres de Sergipe</p>
+      <span class="selo-snct"
+        >Ciência Delas · SNCT 2026 · ODS 5 (Igualdade de gênero) e ODS 8
+        (Trabalho decente)</span
+      >
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
